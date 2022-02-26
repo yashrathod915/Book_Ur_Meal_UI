@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  body {
+    font-family: "Times New Roman", Georgia, Serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+  }
+
+</style>
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-padding w3-card" style="letter-spacing:2px;">
+    <a class="btn btn-outline-secondary" routerLink="/Restaurant">{{restaurantname}}</a>
+    
+    <div class="w3-right w3-hide-small">
+      
+      <a class="btn btn-outline-secondary" routerLink="./addfood">Add Food</a>&nbsp;
+      <a class="btn btn-outline-secondary" routerLink="./editfood">Edit Food</a>&nbsp;
+      <a class="btn btn-outline-secondary" (click)="onlogout()" routerLink="">Logout</a>
+    </div>
+  </div>
+</div>

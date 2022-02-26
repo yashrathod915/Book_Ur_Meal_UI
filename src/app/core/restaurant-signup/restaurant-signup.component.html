@@ -1,0 +1,93 @@
+<ng-http-loader></ng-http-loader>
+<div class="m">
+  <!-- <div class="overlay-image"></div> -->
+  <div class="sign-up-box"><br>
+    <mat-chip-list>
+        <mat-chip color="primary" selected>RESTAURANT</mat-chip>
+      </mat-chip-list>
+
+    <form class="f" [formGroup]="restaurantForm">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Restaurant Name" formControlName="restaurantName" required>
+        <!-- <mat-hint>Enter Restaurant Name</mat-hint> -->
+        <mat-error *ngIf="fval.restaurantName.errors">Enter Valid Name</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="email" placeholder="Email" formControlName="mailId" required>
+        <!-- <mat-hint>Enter Email</mat-hint> -->
+        <mat-error *ngIf="fval.mailId.errors">Enter Valid Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <span matPrefix>+91 &nbsp;</span>
+        <input matInput type="text" placeholder="Contact Number" maxlength="10"
+          formControlName="restaurantContactNumber" required>
+        <mat-hint align="end">{{fval.restaurantContactNumber.value.length}} / 10</mat-hint>
+        <mat-error *ngIf="fval.restaurantContactNumber.errors">Enter Valid Number</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" formControlName="password" required>
+        <mat-icon matSuffix svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"
+          matTooltip=" Must Contain Number, Capital, Small, Special Character "></mat-icon>
+        <!-- <mat-hint>Enter Password</mat-hint> -->
+        <mat-error *ngIf="fval.password.errors">Enter Strong Password</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword" required>
+        <!-- <mat-hint>Enter Your Password</mat-hint> -->
+        <!-- <mat-icon matSuffix svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"
+          matTooltip=" Must Contain Number, Capital, Small, Special Character "></mat-icon> -->
+        <mat-error *ngIf="fval.confirmPassword.errors">Reenter Password</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Door Number" formControlName="doorNumber" required>
+        <!-- <mat-hint>Enter Door Number</mat-hint> -->
+        <mat-error *ngIf="fval.doorNumber.errors">Enter Valid Input</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Street Name" formControlName="streetName" required>
+        <!-- <mat-hint>Enter Street Name</mat-hint> -->
+        <mat-error *ngIf="fval.streetName.errors">Enter Valid Input</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Locality" formControlName="locality" required>
+        <!-- <mat-hint>Enter Locality</mat-hint> -->
+        <mat-error *ngIf="fval.locality.errors">Enter Valid Input</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="City" formControlName="city" required>
+        <!-- <mat-hint>Enter City</mat-hint> -->
+        <mat-error *ngIf="fval.city.errors">Enter Valid City</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="State" formControlName="state" required>
+        <!-- <mat-hint>Enter State</mat-hint> -->
+        <mat-error *ngIf="fval.state.errors">Enter Valid State</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" maxlength="6" placeholder="Zipcode" formControlName="zipcode" required>
+        <!-- <mat-hint>Enter Zipcode</mat-hint> -->
+        <mat-hint align="end">{{fval.zipcode.value.length}} / 6</mat-hint>
+        <mat-error *ngIf="fval.zipcode.errors">Enter Valid Zipcode</mat-error>
+      </mat-form-field> <br>
+      <div class="button">
+        <button mat-raised-button color="primary" [disabled]="restaurantForm.invalid"
+          (click)="register()">Register</button>
+        <button mat-raised-button color="warn" type="reset">Reset</button>
+      </div> <br>
+    </form>
+  </div>
+</div>
+
+
+
+
+<router-outlet></router-outlet>

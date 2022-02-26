@@ -1,0 +1,127 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<div class="header">
+  <nav>
+    <ul>
+      <li>Register</li>
+      <li>Login</li>
+      <li>Register</li>
+    </ul>
+  </nav>
+  <div class="main">
+    <div class="brand">
+      <h2>Tomato</h2>
+    </div>
+
+    <div class="description">
+      <h2>Discover the best food & drinks in Hyderabad</h2>
+    </div>
+
+    <div class="search">
+      <div class="location">
+        <i class="location-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#FF7E8B"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            aria-labelledby="icon-svg-title- icon-svg-desc-"
+            role="img"
+            class="sc-rbbb40-0 iRDDBk"
+          >
+            <title>location-fill</title>
+            <path
+              d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"
+            ></path>
+          </svg>
+        </i>
+        <input placeholder="Hyderabad" class="in" />
+        <i class="" color="#4F4F4F" size="12">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#4F4F4F"
+            width="12"
+            height="12"
+            viewBox="0 0 20 20"
+            aria-labelledby="icon-svg-title- icon-svg-desc-"
+            role="img"
+            class="sc-rbbb40-0 ezrcri"
+          >
+            <title>down-triangle</title>
+            <path d="M20 5.42l-10 10-10-10h20z"></path>
+          </svg>
+        </i>
+      </div>
+
+      <div class="food">
+        <div class="sc">
+          <i class="food-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#828282"
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+              class="sc-rbbb40-0 iwHbVQ"
+            >
+              <title>Search</title>
+              <path
+                d="M19.78 19.12l-3.88-3.9c1.28-1.6 2.080-3.6 2.080-5.8 0-5-3.98-9-8.98-9s-9 4-9 9c0 5 4 9 9 9 2.2 0 4.2-0.8 5.8-2.1l3.88 3.9c0.1 0.1 0.3 0.2 0.5 0.2s0.4-0.1 0.5-0.2c0.4-0.3 0.4-0.8 0.1-1.1zM1.5 9.42c0-4.1 3.4-7.5 7.5-7.5s7.48 3.4 7.48 7.5-3.38 7.5-7.48 7.5c-4.1 0-7.5-3.4-7.5-7.5z"
+              ></path>
+            </svg>
+          </i>
+        </div>
+
+        <input
+          class="in"
+          placeholder="Search for restaurant,cuisine or a dish"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <mat-toolbar id="toolbar" class="fixed-top">
+
+  <button type="button" routerLink="/HomePage" class="btn btn-outline-light">Book Your Meal</button>
+  <div style="display: flex;margin-left:600px;"> 
+     <form>
+     <div id="searchdiv">
+     <input  class="form-control form-control-sm ml-3 w-75" id="searchtextBox" name="searchtextBox"  [(ngModel)]="searchedValue" type="text" placeholder="Search" aria-label="Search">
+     &nbsp;&nbsp;<img src="../../../assets/search1.png" class="imghover" style="width:25px;height:25px" [routerLink]="['/searchfood',searchedValue]">
+    </div> 
+     </form>
+   
+    <div class="buttons" style="display: flex;margin-left:100px;">
+      <div *ngIf="check()">
+        <a class="nav-link" routerLink="/login"><b><button style="letter-spacing:1.5px;" class="headerButton"
+              mat-raised-button><mat-icon style="color:white;margin-top:10px">vpn_key</mat-icon>Login</button></b></a></div>
+      <div *ngIf="check()">
+        <a class="nav-link" routerLink="/signup"><mat-icon style="color:white;margin-top:10px">person_add</mat-icon>
+           <b><button style="letter-spacing:1.5px;" class="headerButton" 
+              mat-raised-button>SignUp</button></b></a>
+      </div>
+      <div *ngIf="!check()">
+        <a class="nav-link" routerLink="/userDashboard"><i style="color:white;margin-top:10px;margin-left:15px"
+            class="fa fa-user-circle-o" aria-hidden="true"></i><b><button style="letter-spacing:1.5px;"
+              class="headerButton" mat-raised-button>Profile</button></b></a>
+      </div>
+      <div *ngIf="!check()">
+        <a class="nav-link cart-link" routerLink="/CartModule"><b><button style="letter-spacing:1.5px;"
+              class="headerButton" mat-raised-button>
+              <mat-icon>shopping_basket</mat-icon> Cart
+            </button></b></a>
+      </div>
+      <div *ngIf="!check()">
+        <a class="nav-link" routerLink="/logout"><i style="color:white;margin-top:10px" class="fa fa-sign-out"
+            aria-hidden="true"></i><b><button style="letter-spacing:1.5px;" class="headerButton"
+              mat-raised-button>Logout</button></b></a></div>
+    </div>
+  </div>
+</mat-toolbar> -->

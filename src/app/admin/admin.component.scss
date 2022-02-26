@@ -1,0 +1,30 @@
+.mat-toolbar{
+    color: aliceblue;
+    background-color: #45454d;
+}
+.mat-toolbar-row{
+    justify-content: space-between;
+}
+
+.mat-sidenav-container{
+    padding:  0px;
+    height: 100%;
+
+}
+.mat-sidenav, .mat-sidenav-content{
+    padding: 16px;
+}
+.mat-sidenav{
+    width: 200px;
+    // background-color: #465881;
+}
+.mat-sidenav-content{
+    background-color: #c9d1d3;
+}
+.mat-nav-list{
+    padding: 5px 0px
+}
+.mat-list-item{
+    padding: 5px 5px
+}
+

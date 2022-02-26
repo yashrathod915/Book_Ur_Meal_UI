@@ -1,0 +1,147 @@
+
+<ng-http-loader ></ng-http-loader>
+<div class="bgimg" style="background-image:repeat-y">
+  <div class="parallaxcover">
+    <p style="margin-top:70px;color:white;font-size:20px;letter-spacing: 0.1em;">&nbsp;&nbsp;
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      &nbsp;&nbsp;<b>MY PROFILE</b></p><br>
+  </div>
+  <form [formGroup]="userProfileDetais">
+    <div class="wrapper container" *ngIf="changedivFlag==1">
+      <div class="row" style="padding:130px">
+        <div class="col-sm-7">
+          <div class="form-group row">
+            <label for="userlabel" class="col-sm-5 col-form-label"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;User Name</label>
+            <div class="col-sm-7">
+              <input formControlName="userName" placeholder="Enter the name" required type="text" [readonly]="isReadOnly"
+                class="form-control-plaintext" id="userName"  maxlength=20 [(ngModel)]="userDetails.userName">
+              <div *ngIf="isReadOnly==false && fva.userName.errors" style="font-size:12px;color:red">Enter Valid Name
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-sm-5 col-form-label"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;Email Id</label>
+            <div class="col-sm-7">
+              <input placeholder="Enter the EmailId" formControlName="emailId" type="text"  maxlength=30 [readonly]="isReadOnly" class="form-control-plaintext"
+                id="email"  [(ngModel)]="userDetails.mailId">
+              <div *ngIf="isReadOnly==false && fva.emailId.errors" style="font-size:12px;color:red">Enter Valid Email
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="mobile" class="col-sm-5 col-form-label"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;Mobile Number</label>
+            <div class="col-sm-7">
+              <input placeholder="Enter the MobileNumber" formControlName="mobileNumber" type="text"  maxlength=10 [readonly]="isReadOnly" class="form-control-plaintext"
+                id="email"  [(ngModel)]="userDetails.mobileNumber">
+              <div *ngIf="isReadOnly==false && fva.mobileNumber.errors" style="font-size:12px;color:red">
+                Enter Valid Mobile Number
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="mobile" class="col-sm-5 col-form-label"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Address</label>
+            <div class="col-sm-2">
+              <input placeholder="DoorNo" formControlName="doorNumber" type="text" [readonly]="isReadOnly" class="form-control-plaintext"
+                id="email"   maxlength=6 [(ngModel)]="userDetails.address.doorNumber">
+              <div *ngIf="isReadOnly==false && fva.doorNumber.errors" style="font-size:12px;color:red">Enter Valid
+                DoorNo
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <input placeholder="Locality" formControlName="locality" type="text" [readonly]="isReadOnly" class="form-control-plaintext"
+                id="email"  maxlength=15 [(ngModel)]="userDetails.address.locality">
+              <div *ngIf="isReadOnly==false && fva.locality.errors" style="font-size:12px;color:red">Enter Valid
+                Locality
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <input placeholder="Street" formControlName="streetName" type="text" [readonly]="isReadOnly" class="form-control-plaintext"
+                id="email"  maxlength=15 [(ngModel)]="userDetails.address.streetName">
+              <div *ngIf="isReadOnly==false && fva.streetName.errors" style="font-size:12px;color:red">Enter Valid
+                StreetName
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="mobile" class="col-sm-5 col-form-label"></label>
+            <div class="col-sm-2">
+              <input placeholder="city" formControlName="city" type="text" [readonly]="isReadOnly" class="form-control-plaintext"
+                id="email"  maxlength=15 [(ngModel)]="userDetails.address.city">
+              <div *ngIf="isReadOnly==false && fva.city.errors" style="font-size:12px;color:red">Enter Valid City
+              </div>
+              <br>
+              <input placeholder="State" formControlName="state" type="text" [readonly]="isReadOnly" class="form-control-plaintext"
+                id="email"  maxlength=15 [(ngModel)]="userDetails.address.state">
+              <div *ngIf="isReadOnly==false && fva.state.errors" style="font-size:12px;color:red">Enter Valid State
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="mobile" class="col-sm-3 col-form-label"></label>
+              <div class="col-sm-3">
+                <input placeholder="ZipCode" maxlength=6 formControlName="pincode" type="text" [readonly]="isReadOnly" class="form-control-plaintext"
+                  id="email" style="width:90px"  [(ngModel)]="userDetails.address.zipcode">
+                <div *ngIf="isReadOnly==false && fva.pincode.errors" style="font-size:12px;color:red;width:40px">Enter
+                  Valid Pincode
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-1">
+
+        </div>
+        <div class="col-sm-4" *ngIf="hideShow==1 && submitFlag">
+          <button type="button" (click)="makeEditable()" class="btn btn-outline-light">Edit Profile</button>
+          <!-- &nbsp;&nbsp;<button type="button" (click)="changePassword()" class="btn btn-outline-secondary">Change
+            Password</button> -->
+        </div>
+        <div class="col-sm-4" *ngIf="hideShow==2 && submitFlag">
+          <button type="button" *ngIf="isReadOnly==false" (click)="editUser()"
+            class="btn btn-outline-light" [disabled]="userProfileDetais.invalid">Submit</button>
+          &nbsp;&nbsp;<button type="button" (click)="callReadonly()" class="btn btn-outline-light">
+            Back</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- <form [formGroup]="userProfileDetais">
+  <div class="wrapper container" *ngIf="changedivFlag==2">
+    <div class="row" style="padding:100px">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="piCurrPass">Old Password</label>
+          <div class="col-md-4">
+            <input id="piCurrPass" name="piCurrPass" type="password" placeholder="Enter the Old Password"
+              class="form-control input-md" style="width:310px" required="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="piNewPass">New Password</label>
+          <div class="col-md-4">
+            <input id="piNewPass" name="piNewPass" style="width:310px" type="password" placeholder="Enter the Password"
+              class="form-control input-md" required="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="piNewPassRepeat">Confirm Password</label>
+          <div class="col-md-4">
+            <input id="piNewPassRepeat" name="piNewPassRepeat"style="width:310px" type="password" placeholder=""
+              class="form-control input-md" required="">
+
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="bCancel"></label>
+          <div class="col-md-8">
+            <button id="bCancel" name="bCancel" class="btn btn-danger">Cancel</button>
+            &nbsp;&nbsp;<button id="bGodkend" name="bGodkend" class="btn btn-success">Success</button>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-1"></div>
+    </div>
+    </div>
+</form> -->

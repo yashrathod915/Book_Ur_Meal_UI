@@ -1,0 +1,75 @@
+<ng-http-loader></ng-http-loader>
+<div class="page-header" style="padding-top:70px;">BOOK YOUR MEAL</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <div class="cart-body">
+        <div class="row cart-header ">
+            <div class="col-lg-3 text-center">
+                YOUR CART
+            </div>
+            <div class="col-lg-9">
+
+            </div>
+        </div>
+        <div class="cart-food-item">
+          <div class="row cart-row" *ngFor="let food of foodsToBeDisplayed">
+            <div class="col-lg-3 food-image text-center">
+                <img src={{food.image}} class="image-div">
+            </div>
+            <div class="col-lg-9 food-details">
+              <div class="row title-row">
+                <div class="col-lg-9 food-name">
+                  {{food.foodName}}
+                </div>
+                <div class="col-lg-3 food-quantity text-center text-dark">
+                  <button mat-button value="food.foodId" (click)="removefood(food.foodId)" class="btn btn-outline-danger this-btn">
+                    <mat-icon>remove_circle_outline</mat-icon>
+                  </button>
+                  {{food.amount}}
+                  <button mat-button (click)="addfood(food.foodId)" class="btn btn-outline-success this-btn">
+                    <mat-icon>add_circle_outline</mat-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="food-price">Price: <span class="price-value">&#x20b9;{{food.foodPrice}}</span></div>
+              <div class="food-description">{{food.foodDescription}}</div>
+              <div class="total-food-price">Subtotal: <span class="price-value">&#x20b9;{{food.foodTotalPrice}}</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="row cart-total">
+          <div class="col-lg-10" style="padding: 10px;">
+            SUBTOTAL
+          </div>
+          <div class="col-lg-2 price-value" style="padding: 10px;">
+            &#x20b9;{{total}}
+          </div>
+        </div>
+        <div class="row cart-total">
+          <div class="col-lg-10" style="padding: 10px;">
+            DELIVERY CHARGES
+          </div>
+          <div class="col-lg-2 price-value" style="padding: 10px;">
+            &#x20b9;10
+          </div>
+        </div>
+        <div class="row cart-total">
+          <div class="col-lg-10" style="padding: 10px;">
+            ESTIMATED TOTAL
+          </div>
+          <div class="col-lg-2 price-value" style="padding: 10px;">
+            &#x20b9;{{total+10}}
+          </div>
+        </div>
+        <div class="row order-button-div" style="justify-content:center;">
+          <button class="order-btn" type="button" (click)="orderFood()">ORDER</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+
+</div>

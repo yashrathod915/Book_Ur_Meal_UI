@@ -1,0 +1,43 @@
+.main {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4.5%;
+  // background-color: #465881;
+  // border: 2px solid blue
+}
+.card-header{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+}
+.my-card {
+  margin: 15px 15px;
+  width: 350px;
+  height: 360px;
+}
+.mat-icon{
+  vertical-align: middle !important;
+  padding-bottom: 3px;
+  }
+.mat-card-content {
+  display: flex;
+  flex-direction: row;
+  height: 40%;
+  width: 40%;
+}
+.address {
+  font-size: 20px;
+}
+.button {
+  display: flex;
+  flex-direction: auto;
+  justify-content: space-between;
+}
+
+.message {
+  margin-top: 20%;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}

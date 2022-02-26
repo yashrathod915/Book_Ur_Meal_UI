@@ -1,0 +1,24 @@
+<div class="message" *ngIf="!dataReceived">
+        <h2>No New Restaurant</h2>
+      </div>
+      <div class="main" *ngIf="dataReceived">
+        <div *ngFor="let r of restaurant">
+          <div class="card my-card">
+            <div class="card-header">
+              <b>Name : {{r.restaurantName}}</b>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Details</h5>
+              <p class="card-text">Contact No : {{r.restaurantContactNumber}}</p>
+              <p class="card-text">Mail : {{r.mailId}}</p>
+              <h5 class="card-title">Address:</h5>
+              <p class="card-text">{{r.restaurantAddress.doorNumber}}, {{r.restaurantAddress.streetName}},
+                {{r.restaurantAddress.locality}}, {{r.restaurantAddress.city}}, {{r.restaurantAddress.state}}</p>
+              <div class="button">
+                <!-- <button type="button" class="btn btn-primary" (click)=status(r.restaurantId,1)>Accept</button> -->
+                <button type="button" class="btn btn-warning" (click)=status(r.restaurantId,0)>Reject</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      

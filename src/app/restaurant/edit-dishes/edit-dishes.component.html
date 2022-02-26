@@ -1,0 +1,30 @@
+<ng-http-loader></ng-http-loader>
+ 
+<div style="height: 100%; width: 100% " align="center">
+ <div
+ style="background-attachment: fixed; height: 100%; width: 100%;background-image: url('https://impos.com.au/wp-content/uploads/2018/05/menu-on-table-with-food.jpg');">
+ 
+ <div class="col-md-6 " style="padding:90px background">
+ <br>
+ <label><strong>Food Items present:</strong> </label>
+ <table class="table table-bordered table-hover" style="color:black">
+ <thead>
+ <th>Food Item</th>
+ <th>Update</th>
+ <th>Status</th>
+
+ </thead>
+ <tbody *ngFor="let fooditem of storedData">
+ <td>{{fooditem.foodName}}</td>
+ <td *ngIf="fooditem.foodAvailabilityStatus===true"><button (click)="deleteFood(fooditem.foodId,0)"
+ class="btn btn-primary">Make unavailable
+ </button></td>
+ <td *ngIf="fooditem.foodAvailabilityStatus===false"><button
+ (click)="deleteFood(fooditem.foodId,1)" class="btn btn-primary">Make available</button></td>
+ <td *ngIf="fooditem.foodAvailabilityStatus===true"><b style="color:green">Available</b></td>
+ <td *ngIf="fooditem.foodAvailabilityStatus===false"><b style="color:red">Not Available</b></td>
+ </tbody>
+ </table>
+ </div>
+ </div>
+</div>

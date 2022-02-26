@@ -1,0 +1,35 @@
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4.5%;
+    // border: 2px solid blue
+  }
+  .my-card {
+    margin: 15px 15px;
+    width: 350px;
+    height: 330px;
+  }
+  .mat-card-content {
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    width: 40%;
+  }
+  .address {
+    font-size: 20px;
+  }
+  .button {
+    display: flex;
+    flex-direction: auto;
+    justify-content: space-between;
+  }
+  
+  .message {
+    margin-top: 20%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+  }
+  

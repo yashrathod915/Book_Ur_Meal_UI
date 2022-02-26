@@ -1,0 +1,97 @@
+<p style="padding:12px"></p><div style="background-color:#ffffffb3;">
+<div class="row" style="display:flex">
+  <div id="box1" style="position:relative">
+    <p class="cardTitle">Total Orders</p>
+    <img src="../../../assets/orders.png" style="width:70px;height:70px;margin-top: -25px;">
+    <div style="position:absolute;margin-top:10px;margin-top: -50px;margin-left:95px;font-size:25px;font-weight:bold">{{Orders}}</div>
+  </div>
+  <div id="box2" style="position:relative">
+    <p class="cardTitle" style="margin-left:70px">Total Customers</p>
+    <img src="../../../assets/users.png" style="width:70px;height:70px;margin-top: -25px;">
+    <div style="position:absolute;margin-top:10px;margin-top: -50px;margin-left:95px;font-size:25px;font-weight:bold">{{users}}</div>
+  </div>
+  <div id="box3" style="position:relative">
+    <p class="cardTitle" >Total Restaurants</p>
+    <img src="../../../assets/totalRestaurant.png" style="width:70px;height:70px;margin-top: -25px;">
+    <div style="position:absolute;margin-top:10px;margin-top: -50px;margin-left:95px;font-size:25px;font-weight:bold">{{totalRestaurant}}</div>
+  </div>
+  <div id="box4" style="position:relative">
+    <p class="cardTitle" style="margin-left: 37px;">Approved Restaurant</p>
+    <img src="../../../assets/approvedRestaurant.png" style="width:70px;height:70px;margin-top: -25px;">
+    <div style="position:absolute;margin-top:10px;margin-top: -50px;margin-left:95px;font-size:25px;font-weight:bold">{{approvedRestaurant}}</div>
+  </div>
+  <div id="box5" style="position:relative">
+    <p class="cardTitle">Rejected Restaurant</p>
+    <img src="../../../assets/rejectedRestaurant.png" style="width:60px;height:60px;margin-top: -25px;">
+    <div style="position:absolute;margin-top:10px;margin-top: -50px;margin-left:95px;font-size:25px;font-weight:bold">{{RejectedRestaurant}}</div>
+  </div>
+</div><br>
+<div class="row">
+<div class="col-md-9"></div>
+<div class="col-md-3">
+<button type="button" style="border:solid grey;border-width:4px" class="btn btn-dark">Pending Restaurant Approval : {{pendingRestaurant}}</button>
+</div>
+</div>
+<br>
+<div class="container wrapper">
+<div class="row">
+  <div class="col-sm-6"><br>
+    <h5>Leading Restaurants</h5>
+    <div style="display: block;" class="shadowParent">
+      <canvas baseChart 
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [colors]="chartColors"
+        [legend]="false"
+        [chartType]="barChartType">
+      </canvas>
+    </div>
+  </div>
+  <!-- <div class="col-sm-1"></div> -->
+  <div class="col-sm-6"><br> 
+    <h5>Least Restaurants</h5>
+    <div style="display: block;">
+      <canvas baseChart 
+        [datasets]="leastChartData"
+        [labels]="polarChartLabels"
+        [colors]="chartColors"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="false"
+        [chartType]="polarChartType">
+      </canvas>
+    </div>
+  </div>
+</div>
+</div><br>
+<div class="container wrapper">
+    <div class="row">
+      <div class="col-sm-12">
+        <h5>Maximum Ordered Food</h5>
+        <div style="display: block;">
+          <canvas baseChart 
+            height="80"
+            [datasets]="foodChart"
+            [labels]="foodChartLabels"
+            [colors]="foodChartColors"
+            [legend]="false"
+            [chartType]="foodChartType">
+          </canvas>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
+<!-- <div style="display: block;">
+    <canvas baseChart 
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [colors]="chartColors"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+    </canvas>
+  </div>  -->
+  

@@ -1,0 +1,74 @@
+<ng-http-loader ></ng-http-loader>
+<div class="m">
+  <div class="overlay-image"></div>
+  <div class="sign-up-box"><br>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>ADD FOOD ITEM</mat-card-title>
+    </mat-card-header>
+    <form class="f" [formGroup]="myForm">
+   
+      <mat-form-field>
+        <input matInput type="text" name="foodName" placeholder="Food Name" formControlName="foodName" minlength="2"
+          maxlength="20" required>
+        <div class="error" *ngIf="f.foodName.errors&&f.foodName.touched" style="color: red">*required</div>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput required type="text" name="foodDescription" placeholder="Food Description"
+          formControlName="foodDescription" maxlength="30">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput required type="number" name="foodQuantity" placeholder="Quantity" formControlName="foodQuantity"
+          required>
+        <div class="error" *ngIf="f.foodQuantity.errors&&f.foodQuantity.touched" style="color: red">*required</div>
+      </mat-form-field>
+  
+  
+      <mat-form-field>
+        <input matInput required type="number" name="foodPrice" placeholder="Food Price" formControlName="foodPrice" required>
+        <div class="error" *ngIf="f.foodPrice.errors&&f.foodPrice.touched" style="color: red">*required</div>
+      </mat-form-field>
+  
+      <mat-form-field>
+          <mat-label>Food Availibility Status</mat-label>
+          <mat-select formControlName="foodAvailabilityStatus">
+            <mat-option value="true">true
+            </mat-option>
+            <mat-option value="false">false
+              </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+       <label>Food Image:
+         <br>
+        <input type="file" value="image" (change)="showPreview($event)" />
+      </label>
+      
+      <div formArrayName="ingredients">
+  
+        <div *ngFor="let ingredient of IngredientsForms.controls; let i=index" [formGroupName]="i">
+  
+          <input required placeholder="ingredient" formControlName="ingredientName">
+          <input required placeholder="quantity" formControlName="ingredientQuantity">
+  
+          <button (click)="deleteIngredient(i)">Delete</button>
+  
+        </div>
+      </div><br>
+  
+      <button (click)="addIngredient()" class="btn btn-primary">Add Ingredients</button><br>
+      
+      <button (click)="onSubmit()" [disabled]="!myForm.valid" class="btn btn-success">Submit</button>
+  
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+

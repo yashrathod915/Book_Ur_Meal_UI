@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+.page-header
+{
+    padding: 20%;
+    font-size:1.6rem;
+    letter-spacing:2px;
+    font-weight:200;
+    font-family: 'Girassol', cursive;
+    border:1px black solid;
+    font-weight:500;
+    padding:4px;
+}
+.cart-body
+{
+    font-size:15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left:1px black solid;
+    border-right:1px black solid;
+    border-bottom:1px solid black;
+}
+.cart-row
+{
+    border-bottom:1px black solid;
+    margin: 0;
+}
+.food-image
+{
+    border-right:1px black solid;
+    padding:0;
+}
+.image-div
+{
+    height:180px;
+    width:160px;
+}
+.cart-header
+{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.15rem;
+    padding:4px;
+    font-weight:700;
+    text-align:center;
+    border-bottom:1px black solid;
+}
+.food-description
+{
+    padding:4px;
+}
+.total-food-price
+{
+    padding:4px;
+}
+.price-value
+{
+    font-weight:700;
+    font-family: 'Roboto', sans-serif;
+    font-size:1rem;
+}
+.food-name
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    letter-spacing:1.25px;
+    padding:4px;
+    padding-left:8px;
+    width:100vh;
+    text-transform:uppercase;
+}
+.food-price
+{
+    padding:4px;
+}
+.title-row
+{
+    padding:4px;
+}
+.food-quantity
+{
+    padding:4px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cart-total
+{
+    border-bottom:1px solid black;
+    margin:0;
+    padding-top:4px;
+}
+.order-button-div
+{
+    padding: 10px;
+}
+.this-btn
+{
+    border: #fff;
+}
+.this-btn:hover
+{
+    color:white;
+}
+.order-btn
+{
+    background-color: transparent;
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    padding: 0 15px;
+    margin: 0;
+    min-width: 187px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    -webkit-appearance: none;
+    line-height: 16px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #000;
+    min-height: 32px;
+    line-height: 30px;
+    border-radius: 16px;
+    width: 187px;
+    outline: none;
+}

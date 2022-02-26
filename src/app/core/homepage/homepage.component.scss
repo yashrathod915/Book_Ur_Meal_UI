@@ -1,0 +1,396 @@
+#location{
+    width: 73%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    margin-left: 136px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+#findRestaurantbutton{
+    margin-top:10px;
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+.img{
+    height:10%;
+    width:10%
+}
+#searchtextBox{
+    width: 103%;
+    padding: 16px 3px;
+    margin: 8px 0;
+    margin-top: -94px;
+    margin-left: -80px;
+    display: inline-block;
+    border: 5px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+    opacity: 0.4;
+    font-weight: bold;
+    font-family: "Times New Roman";
+    font-style: italic;
+    font-size:19px;
+}
+#searchdiv{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width:63%; 
+}
+#searchRestaurantButton{
+    margin-top:100px;
+}
+#recentOrders{
+  font-size: 22px;
+  font-family: "Times New Roman";
+  font-style: italic;
+  font-weight: bold;
+  color: #0d0d0d;
+  text-shadow: -1px 1px #607D8B;
+}
+.foodCard{
+  width: 255px;
+  height: 135px;
+  margin-left:-15.5px;
+  margin-bottom:-7px;
+}
+
+.imagematCard{
+  width: 256px;
+  height: 250px;
+  transition: transform 0.2s;
+  background-color: rgba(0, 0, 0, 0);
+}
+.foodCard:hover{
+    transform: scale(1.1); 
+    border: 1px solid black;
+    opacity:0.9;
+}
+.cityImages{
+    height:200px;
+    width:200px;
+    border-radius: 25px;
+    // -webkit-transition: -webkit-transform .8s ease-in-out;
+    //       transition:         transform .8s ease-in-out;
+}
+// .cityImages:hover {
+//     -webkit-transform: rotate(360deg);
+//             transform: rotate(360deg);
+//   }
+#aboutUsTitle{
+    text-align: center;
+    font-size: 35px;
+    font-family:"Times New Roman,Georgia,Serif";
+    // font-style: italic;
+    // font-weight: bold;
+    text-shadow: 1px 2px grey;;
+}
+#aboutUsContent{
+    // font-style: italic;
+    font-family: "Times New Roman";
+    font-size: 25px;
+}
+#contactus{
+    border: solid #03030342;
+    width: 100%;
+    height: 229px;
+    margin-top: 20px;
+    background-color: #03030342;
+    opacity: 0.5;
+}
+#contactUstitle{
+    text-align:left;
+    font-size: 29px;
+    font-style: italic;
+    font-weight: bold;
+    color:white;  
+    text-shadow: 3px 2px #9E9E9E;
+}
+#contactUsContent{
+    text-align:left;
+    margin-left:10px;
+    font-family: "Times New Roman";
+    font-style: italic;
+    font-size: 22px;
+    color:black;
+}
+.parallax {
+    background-image: url('./../../../assets/ParallaxImage2.jpg');
+    min-height:470px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    color:white;
+  }
+  .parallaxcover{
+    min-height:470px; 
+    position:absolute;
+    background-color:rgba(0,0,0,1);
+    opacity: 0.7;
+    width:100%;
+  }
+  .parallax2 {
+    background-image: url('./../../../assets/ParallaxImage1.jpg');
+    min-height:500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    color:white;
+  }
+  .parallaxcover2{
+    min-height:500px; 
+    position:absolute;
+    background-color:rgba(0,0,0,3);
+    opacity: 0.7;
+    width:100%;
+  }
+  .parallax3 {
+    background-image: url('./../../../assets/Parallax3.jpg');
+    min-height:300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    color:white;
+  }
+  .parallaxcover3{
+    min-height:300px; 
+    position:absolute;
+    background-color:rgba(0,0,0,2);
+    opacity: 0.7;
+    width:100%;
+  }
+  #titlerestaurantreg{
+   
+    font-size: 30px;
+    // font-style: italic;
+    font-weight: bold;
+    color:white;  
+    font-family: "Times New Roman";
+  }
+  #regRestaurant{
+    font-size: 25px;
+    // font-style: italic;
+    font-weight: bold;
+    color:white;  
+    font-family: "Times New Roman";
+
+  }
+  #AdvertiseContent{
+    font-size:23px;
+    // font-style: italic;
+    color:white;  
+    font-family: "Times New Roman";
+  }
+  #restaurantbutton{
+    background-color: #e91e63c9;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 16px;
+    opacity: 0.89;
+}
+  
+  #f1_container {
+    position: relative;
+    margin: 10px auto;
+    height:200px;
+    width:200px;
+    border-radius: 25px;
+    z-index: 1;
+  }
+  #f1_container {
+    perspective: 1000;
+  }
+  #f1_card {
+    height:200px;
+    width:200px;
+    border-radius: 25px;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+    
+  }
+  #f1_container:hover #f1_card {
+    // transform: rotateY(180deg);
+    box-shadow: rgba(0,0,0,1);
+    opacity:0.85;
+ 
+  }
+  .face {
+    position: absolute;
+    height:200px;
+    width:200px;
+    border-radius: 25px;
+    backface-visibility: hidden;
+  }
+  .face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    // padding: 10px;
+    // color: white;
+    // text-align: center;
+    // background-color:rgba(0, 0, 0, 0.35)
+  }
+  #popularRestaurant{
+  
+    background-color:white;
+
+  }
+  #f1_container .text {
+    bottom:30px;
+    left:0px;
+    visibility:hidden;
+    }
+    
+    #f1_container:hover .text {
+    visibility:visible;
+    color:white;
+    text-align:center;
+    font-size:20px;
+    margin-top:-50px;
+    font-weight: bold;
+  
+    }
+    // .carousel-fade .carousel-inner .item {
+    //   opacity: 0;
+    //   -webkit-transition-property: opacity;
+    //   -moz-transition-property: opacity;
+    //   -o-transition-property: opacity;
+    //   transition-property: opacity;
+    // }
+    // .carousel-fade .carousel-inner .active {
+    //   opacity: 1;
+    // }
+    // .carousel-fade .carousel-inner .active.left,
+    // .carousel-fade .carousel-inner .active.right {
+    //   left: 0;
+    //   opacity: 0;
+    //   z-index: 1;
+    // }
+    // .carousel-fade .carousel-inner .next.left,
+    // .carousel-fade .carousel-inner .prev.right {
+    //   opacity: 1;
+    // }
+    // .carousel-fade .carousel-control {
+    //   z-index: 2;
+    // }
+    .container{
+      color:red;
+      animation: mymove 3s;
+      position :relative;
+      left: 660px;
+     
+    }
+    @keyframes mymove {
+      from {left: 1100px;}
+      to {left: 660px;}
+    }
+    .container1{
+      color:red;
+      animation: mymove1 3s;
+      position :relative;
+      left: 850px;
+      
+     
+    }
+    @keyframes mymove1 {
+      from {left: 0;}
+      to {right: 700px;}
+     
+    }
+   .text1{
+    font-size:30px;
+     color:white;
+     font-family:"sans-serif";
+     font-style: oblique;
+     text-shadow: 2px 2px black;
+     font-weight:900;
+   }
+   .text2{
+    font-size:30px;
+    color:white;
+    font-family:"sans-serif";
+    font-style: oblique;
+    text-shadow: 2px 2px black;
+    font-weight:900;
+  }
+
+
+
+  .container2{
+    color:red;
+    animation: mymove2 3s;
+    position :relative;
+    left: 560px;
+   
+  }
+  @keyframes mymove2 {
+      from {left: 1300px;}
+      to {left: 560px;}
+  }
+  .container3{
+     color:red;
+     animation: mymove3 3s;
+     position :relative;  
+     left:160px;
+  }
+  @keyframes mymove3 {
+    from {left:0px;}
+    to {right: 300px;}
+   }
+   .text3{
+    font-size:30px;
+    color:white;
+    font-family:"sans-serif";
+    // font-style: oblique;
+    text-shadow: 2px 2px Black;
+    font-weight:900;
+  }
+  .text4{
+    font-size:30px;
+   color:white;
+   font-family:"sans-serif";
+  //  font-style: oblique;
+   text-shadow: 2px 2px black;
+   font-weight:900;
+   opacity:0.9
+ }
+.parallaxcover11{
+  min-height:610px;
+  position:absolute;
+  background-color:rgba(0,0,0,1);
+  opacity:0.3;
+  width:100%;
+}
+.parallaxcover12{
+  min-height:610px;
+  position:absolute;
+  background-color:rgba(0,0,0,1);
+  opacity:0.2;
+  width:100%;
+}
+.parallaxcover13{
+  min-height:610px;
+  position:absolute;
+  background-color:rgba(0,0,0,1);
+  opacity:0.2;
+  width:100%;
+}
+     
+ 
+    

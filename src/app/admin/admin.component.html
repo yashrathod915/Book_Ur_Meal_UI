@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<mat-toolbar class="fixed-top">
+  <mat-toolbar-row>
+    <a>
+      <button mat-icon-button (click)="opened=!opened">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <label>&nbsp;{{  title}}</label>
+    </a>
+    <button mat-raised-button color="primary" (click)="logOut()">Logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<ng-http-loader></ng-http-loader>
+<mat-sidenav-container class="main">
+  <mat-sidenav [(opened)]=opened>
+    <mat-nav-list>
+      <a mat-list-item ></a>
+      <a mat-list-item routerLink="./adminStatics" (click)="opened=!opened"><mat-icon>dashboard</mat-icon>&nbsp;
+        Dashboard</a>
+      <a mat-list-item routerLink="./request" (click)="opened=!opened"><mat-icon>contact_support</mat-icon>&nbsp;Requests</a>
+      <a mat-list-item routerLink="./approved" (click)="opened=!opened"><mat-icon>check_circle</mat-icon>&nbsp;Approved</a>
+      <a mat-list-item routerLink="./rejected" (click)="opened=!opened"><mat-icon>warning</mat-icon>&nbsp;Rejected</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

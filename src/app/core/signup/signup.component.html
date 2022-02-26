@@ -1,0 +1,92 @@
+<ng-http-loader></ng-http-loader>
+<div class="m">
+  <div class="sign-up-box">
+    <br>
+    <mat-chip-list>
+      <mat-chip color="primary" selected>U S E R</mat-chip>
+    </mat-chip-list>
+    <form class="f" [formGroup]="registerForm">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Name" formControlName="userName" required>
+        <!-- <mat-hint>Enter Your Name</mat-hint> -->
+        <mat-error *ngIf="fva.userName.errors">Enter Valid Name</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="email" placeholder="Email" formControlName="mailId" required>
+        <!-- <mat-hint>Enter Your Email</mat-hint> -->
+        <mat-error *ngIf="fva.mailId.errors">Enter Valid Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" formControlName="password" required>
+        <!-- <mat-hint>Enter Your Password</mat-hint> -->
+        <mat-icon matSuffix svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"
+          matTooltip=" Must Contain Number, Capital, Small, Special Character "></mat-icon>
+        <mat-error *ngIf="fva.password.errors">Enter Valid Password</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword" required>
+        <!-- <mat-hint>Enter Your Password</mat-hint> -->
+        <!-- <mat-icon matSuffix svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"
+          matTooltip=" Must Contain Number, Capital, Small, Special Character "></mat-icon> -->
+        <mat-error *ngIf="fva.confirmPassword.errors">Reenter Password</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <span matPrefix>+91 &nbsp;</span>
+        <input matInput type="text" placeholder="Mobile Number" maxlength="10" formControlName="mobileNumber" required>
+        <mat-hint align="end">{{fva.mobileNumber.value.length}} / 10</mat-hint>
+        <!-- <mat-error *ngIf="fva.mobileNumber.errors">Enter Valid Number</mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Door Number" formControlName="doorNumber" required>
+        <!-- <mat-hint>Enter Your Door Number</mat-hint> -->
+        <mat-error *ngIf="fva.doorNumber.errors">Enter Valid Input</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Street Name" formControlName="streetName" required>
+        <!-- <mat-hint>Enter Your Street</mat-hint> -->
+        <mat-error *ngIf="fva.streetName.errors">Enter Valid Input</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Locality" formControlName="locality" required>
+        <!-- <mat-hint>Enter Your Locality</mat-hint> -->
+        <mat-error *ngIf="fva.locality.errors">Enter Valid Input</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="City" formControlName="city" required>
+        <!-- <mat-hint>Enter Your City</mat-hint> -->
+        <mat-error *ngIf="fva.city.errors">Enter Valid City</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="State" formControlName="state" required>
+        <!-- <mat-hint>Enter State</mat-hint> -->
+        <mat-error *ngIf="fva.state.errors">Enter Valid State</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Zipcode" maxlength="6" formControlName="zipcode" required>
+        <!-- <mat-hint>Enter Zipcode</mat-hint> -->
+        <mat-hint align="end">{{fva.zipcode.value.length}} / 6</mat-hint>
+        <mat-error *ngIf="fva.zipcode.errors">Enter Valid Zipcode</mat-error>
+      </mat-form-field>
+      <br>
+      <div class="button">
+        <button mat-raised-button color="primary" [disabled]="registerForm.invalid"
+          (click)="registerUser()">Register</button>
+        <button mat-raised-button color="warn" type="reset">Reset</button>
+      </div>
+      <br>
+      <br>
+      <!-- <div style=" display: flex; justify-content: center; flex-direction: column;">
+        <h6 style="text-align: center;">Already a user ? <a routerLink="/login">Login</a></h6>
+      </div><br> -->
+    </form>
+  </div>
+</div>
